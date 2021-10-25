@@ -9,15 +9,16 @@ Then, research the question to expand on your answer. Even if you feel you have 
 
   Your answer:
 
-  Researched answer:
+  Researched answer: Cohort has_many Students, Student belongs_to Cohort, Student has the foreign key because the foreign key is always on the belongs to side, name of the foreign column is cohort_id:integer, generate migration to fix the missing column
 
+  rails g migration add_foreign_key
 
 
 2. Which RESTful routes must always be passed params? Why?
 
   Your answer:
 
-  Researched answer:
+  Researched answer: Edit, Update, Show, Destroy - have to know which item we are performing the action on
 
 
 
@@ -25,25 +26,25 @@ Then, research the question to expand on your answer. Even if you feel you have 
 
   Your answer:
 
-  Researched answer:
+  Researched answer: rails g model - model class, migration // rails g controller - controller class, view folder // rails g rspec - testing folders // rails g migration - migration // rails g resource - model, controller, view folder, migration // rails g scaffold - controller, model, views folders, testing
 
 
 
 4. Consider the Rails routes below. What is the name of the controller method that would be called by each route? What action would each of the controller methods perform?
 
-method="GET"    /students          
+method="GET"    /students          index - get all the data from the db
 
-method="POST"   /students       
+method="POST"   /students          create - create a new student instance in the db
 
-method="GET"    /students/new
+method="GET"    /students/new      new - form for creating a new student
 
-method="GET"    /students/2  
+method="GET"    /students/2        show - displaying the student with id 2
 
-method="GET"    /students/2/edit    
+method="GET"    /students/2/edit   edit - form for editing a specific student
 
-method="PATCH"  /students/2      
+method="PATCH"  /students/2        update - modifying the instance of the specific student
 
-method="DELETE" /students/2      
+method="DELETE" /students/2        destroy - removing the instance of the student with the id 2
 
 
 
